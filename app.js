@@ -34,10 +34,11 @@ function verificarChute() {
     
             exibirTextoNaTela ('h1',msgMaiorMenor);
             tentativas++;
+            limparCampo();
         }
         }
         
-        limparCampo()
+        
 
 function gerarNumeroAleatorio() {
     let numeroEscolhido = parseInt(Math.random() * numeroLimite + 1);
