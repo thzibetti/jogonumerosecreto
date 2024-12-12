@@ -19,16 +19,15 @@ exibirMensagemInicial();
 
 function verificarChute() {
     let chute = document.querySelector('input').value;
-    
+    let palavraTentativa = tentativas > 1 ? 'tentativas' : 'tentativa';
+
     if (chute == numeroSecreto) {
         exibirTextoNaTela ('h1','Acertou!');
-        let palavraTentativa = tentativas > 1 ? 'tentativas' : 'tentativa';
         let mensagemTentativas = `Você descobriu o número com ${tentativas} ${palavraTentativa}!`;
         exibirTextoNaTela ('p',mensagemTentativas);
         document.getElementById('reiniciar').removeAttribute('disabled');
     }
     else {
-        let palavraTentativa = tentativas > 1 ? 'tentativas' : 'tentativa';
         let maiorMenor = chute > numeroSecreto ? 'menor':'maior'
         let msgMaiorMenor = `O número é ${maiorMenor} que ${chute}! Você usou ${tentativas} ${palavraTentativa}`;
     
